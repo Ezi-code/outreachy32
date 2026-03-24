@@ -11,10 +11,11 @@ CSV_FILE = BASE_DIR / "Task 2 - Intern.csv"
 ERROR_FILE = BASE_DIR / "errors.txt"
 
 logging.basicConfig(
-    filename=ERROR_FILE, 
+    filename=ERROR_FILE,
     level=logging.ERROR,
-    format="%(asctime)s [%(levelname)s] %(message)s"
+    format="%(asctime)s [%(levelname)s] %(message)s",
 )
+
 
 def get_urls_from_file(file_path: Path) -> list[str]:
     """get urls from a csv file."""
@@ -36,6 +37,7 @@ def get_status_code(url: str) -> Optional[int]:
     except requests.exceptions.RequestException as err:
         return logging.error(f"{url} -> {err}")
 
+
 def main():
     """main function."""
     urls = get_urls_from_file(CSV_FILE)
@@ -45,5 +47,5 @@ def main():
             print(f"({status}) {url}")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
