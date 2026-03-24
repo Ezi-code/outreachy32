@@ -27,6 +27,6 @@ Check `error.txt` for details on any failed requests.
 ### Testing
 Run the test script from the `python/` directory:
 ```bash
-python3 test.py
+python3 -m unittest test.py
 ```
 This will run the tests and print the results to the console.
