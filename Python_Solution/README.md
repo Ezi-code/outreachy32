@@ -18,14 +18,14 @@ A Python script (`app.py`) that automates the process of reading URLs from a CSV
 5. **Robustness**: The script uses `isinstance(status, int)` to ensure it only prints valid HTTP status codes to the console.
 
 ## Usage
-Run the script from the `pytask/app/` directory:
+Run the script from the `/Python_Solution` directory:
 ```bash
 python3 app.py
 ```
 Check `error.txt` for details on any failed requests.
 
 ### Testing
-Run the test script from the `pytask/` directory:
+Run the test script from the `/Python_Solution` directory:
 ```bash
 python3 -m unittest test.py
 ```
